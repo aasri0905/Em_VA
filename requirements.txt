@@ -1,0 +1,16 @@
+h5py
+imageio==2.6.1
+imgaug==0.2.7
+imutils==0.5.3
+Keras==2.2.4
+Keras-Applications==1.0.8
+Keras-Preprocessing
+numpy
+opencv-python==4.5.4.58
+Pillow==7.0.0
+scikit-image
+scikit-learn
+scipy
+tensorboard
+tensorflow==2.5.0
+tensorflow-estimator
