@@ -1,9 +1,6 @@
 import threading
 
 import os
-os.system("pip install opencv-python==4.5.4.58")
-
-
 
 import cv2
 import streamlit as st
