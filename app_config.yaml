@@ -1,0 +1,13 @@
+credentials:
+  usernames: 
+    Con:
+      email: saiakhil19932@gmail.com
+      name: Akhil
+      password: ZMK12345 # To be replaced with hashed password
+cookie:
+  expiry_days: 12
+  key: "LOPKOPJIOP" # Must be string
+  name: LOP
+preauthorized:
+  emails:
+  - saiakhil19932@gmail.com

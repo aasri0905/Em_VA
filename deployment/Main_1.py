@@ -1,6 +1,6 @@
 import keras.backend as K
 import sys
-sys.path.append("/home/akhilesh/AffectNet")
+sys.path.append("./")
 from datetime import datetime
 import cv2
 
@@ -14,19 +14,15 @@ import matplotlib.pyplot as plt
 
 
 ## OPTIONS ##
-path_main = "/home/akhilesh/AffectNet/deployment/frozen_graphs"
+path_main = "./deployment/frozen_graphs"
 PATH_TO_CKPT = path_main+'/frozen_inference_graph_face.pb'
 PATH_TO_CLASS = path_main+'/classificator_full_model.pb'
 PATH_TO_REGRESS = path_main+'/regressor_full_model.pb'
-label_map = label_map_util.load_labelmap('/home/akhilesh/AffectNet/deployment/protos/face_label_map.pbtxt')
+label_map = label_map_util.load_labelmap('./deployment/protos/face_label_map.pbtxt')
 categories = label_map_util.convert_label_map_to_categories(label_map, max_num_classes=2, use_display_name=True)
 category_index = label_map_util.create_category_index(categories)
 detector = TensorflowDetector(PATH_TO_CKPT, PATH_TO_CLASS, PATH_TO_REGRESS)
 
-
-
-
-# cap = cv2.VideoCapture(0)
 
 
 def Primary(image):
@@ -50,17 +46,3 @@ def Primary(image):
         return 0, 0, 0, 0, 0
     else:
         return valence, arousal, emotions_print,emotions_score, boxes
-
-
-
-# while True:
-#     ret, frame = cap.read()
-#     main_function = Primary(frame)
-#     print(main_function)
-#     cv2.imshow("Frame", frame)
-
-#     k = cv2.waitKey(1) & 0xff
-#     if k == ord('q') or k == 27:
-#         break
-
-# cv2.destroyAllWindows()
