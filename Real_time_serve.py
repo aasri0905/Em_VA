@@ -1,5 +1,10 @@
 import threading
 
+import os
+os.system("pip install opencv-python==4.5.4.58")
+
+
+
 import cv2
 import streamlit as st
 from matplotlib import pyplot as plt
@@ -10,7 +15,6 @@ import av
 import numpy as np
 import tempfile
 import io
-import os
 # import Main_1
 from deployment import Main_1
 import pandas as pd 
