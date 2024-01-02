@@ -24,7 +24,7 @@ import time
 # hashed_passwords = stauth.Hasher(['abc', 'def']).generate()
 
 
-# RTC_CONFIGURATION = RTCConfiguration({"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]})
+RTC_CONFIGURATION = RTCConfiguration({"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]})
 lock = threading.Lock()
 img_container = {"img": None}
 start_time = time.time()
@@ -36,9 +36,9 @@ def video_frame_callback(frame):
         img_container["img"] = img
     return frame
 
-# ctx = webrtc_streamer(key="Internaltest", video_frame_callback=video_frame_callback,rtc_configuration=RTC_CONFIGURATION,media_stream_constraints={"video": True,"audio": False})
+ctx = webrtc_streamer(key="Internaltest", video_frame_callback=video_frame_callback,rtc_configuration=RTC_CONFIGURATION,media_stream_constraints={"video": True,"audio": False})
 
-ctx = webrtc_streamer(key="Internaltest", video_frame_callback=video_frame_callback,media_stream_constraints={"video": True,"audio": False})
+#ctx = webrtc_streamer(key="Internaltest", video_frame_callback=video_frame_callback,media_stream_constraints={"video": True,"audio": False})
 
 
 valence_data = []
