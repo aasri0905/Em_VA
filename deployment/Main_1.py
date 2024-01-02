@@ -32,7 +32,7 @@ def Primary(image):
 
     text = "classes: {}".format(emotions_print)
     cv2.putText(image, text, org=(25, 25), fontFace=cv2.FONT_HERSHEY_DUPLEX,fontScale=0.35, color=(0, 255, 0))
-    frame = vis_util.visualize_boxes_and_labels_on_image_array(image,np.squeeze(boxes),np.squeeze(classes).astype(np.int32),np.squeeze(scores),category_index,use_normalized_coordinates=True,line_thickness=1)
+    # frame = vis_util.visualize_boxes_and_labels_on_image_array(image,np.squeeze(boxes),np.squeeze(classes).astype(np.int32),np.squeeze(scores),category_index,use_normalized_coordinates=True,line_thickness=1)
 
     try:
         valence = float(valence[0])

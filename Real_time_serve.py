@@ -13,6 +13,8 @@ import numpy as np
 import tempfile
 import io
 # import Main_1
+import sys
+sys.path.append("./deployment/")
 from deployment import Main_1
 import pandas as pd 
 import datetime 
