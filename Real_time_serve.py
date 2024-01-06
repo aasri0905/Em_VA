@@ -67,13 +67,13 @@ def update_plot(valence_data,timestamps,arousal_data,scores_list):
         "valence": valence_data
     })
     with col1:
-        chart_placeholder_valence.line_chart(D1,x="timestamp")
+        chart_placeholder_valence.line_chart(D1,x="timestamp",y="valence")
     D2 = pd.DataFrame({
         "timestamp": timestamps,
         "arousal": arousal_data
     })
     with col2:
-        chart_placeholder_arousal.line_chart(D2,x="timestamp")
+        chart_placeholder_arousal.line_chart(D2,x="timestamp",y="arousal")
     
 
     # Create a single plot for emotions
