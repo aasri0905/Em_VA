@@ -1,2 +1,4 @@
 libsrtp2-dev
 ffmpeg
+x264
+libx264-dev
