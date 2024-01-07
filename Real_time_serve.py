@@ -45,9 +45,9 @@ if task_name == task_list[0]:
             img_container["img"] = img
         return frame
 
-    # ctx = webrtc_streamer(key="Internaltest", video_frame_callback=video_frame_callback,rtc_configuration=RTC_CONFIGURATION,media_stream_constraints={"video": True,"audio": False})
+    ctx = webrtc_streamer(key="Internaltest", video_frame_callback=video_frame_callback,rtc_configuration=RTC_CONFIGURATION,media_stream_constraints={"video": True,"audio": False})
 
-    ctx = webrtc_streamer(key="Internaltest", video_frame_callback=video_frame_callback,media_stream_constraints={"video": True,"audio": False})
+    # ctx = webrtc_streamer(key="Internaltest", video_frame_callback=video_frame_callback,media_stream_constraints={"video": True,"audio": False})
 
 
     valence_data = []
