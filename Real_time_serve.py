@@ -263,7 +263,10 @@ elif task_name == task_list[1]:
                 scores_list[7].append(emotions_score_)
             else:
                 scores_list[7].append(0)
-                result.write(frame)
+        
+            result.write(frame)
+        
+        result.release()
 
         os.system("ffmpeg -i demo_pop.mp4 -c:v libx264 -profile:v main -vf format=yuv420p -c:a aac -movflags +faststart output.mp4 -y")
 
