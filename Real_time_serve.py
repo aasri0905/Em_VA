@@ -171,7 +171,7 @@ elif task_name == task_list[1]:
 
         print(frame_width, frame_height)
         size = (frame_width, frame_height)
-        fourcc = cv2.VideoWriter_fourcc(*'h264')
+        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
         result = cv2.VideoWriter('demo_pop.mp4', fourcc,20, (frame_width,frame_height))
 
         col1, col2 = st.columns([2,2],gap='medium')
